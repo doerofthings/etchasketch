@@ -9,11 +9,23 @@ html {
 
 body {
   line-height: 1.5;
+  text-align: center;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 960px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(16, 40px);
+  grid-template-rows: repeat(16, 40px);
+  /* gap: 0; */
+  justify-content: center;
+}
+.new {
+  border: 2px solid black;
 }
