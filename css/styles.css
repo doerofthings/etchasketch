@@ -28,4 +28,11 @@ body {
 }
 .new {
   border: 2px solid black;
+  cursor: pointer;
+}
+.red {
+  background-color: red;
+}
+.black {
+  background-color: black;
 }
