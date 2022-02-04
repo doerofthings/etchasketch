@@ -7,30 +7,50 @@ topSectionContainer.append(clearBtn);
 
 let div = document.getElementById("grid-container");
 let gridLength = 257
-for (let i = 1; i < gridLength; i++) {
-    let span = document.createElement("span");
-    span.setAttribute("class", "new");
-    // span.innerHTML += i;
-    div.appendChild(span);
 
-      
-    const boxArray = [];
-    boxArray.push(span)
-    boxArray.forEach(box =>{
-        console.log("this is a box")
-        box.addEventListener("mouseover", event =>{
-            box.classList.add('red');  
+let etchBoxes = (number) =>{
+    for (let i = 0; i < number*number; i++) {
+        let span = document.createElement("span");
+        span.setAttribute("class", "new");
+        div.appendChild(span);
+        const boxArray = [];
+        boxArray.push(span)
+        boxArray.forEach(box =>{
+            console.log("this is a box")
+            box.addEventListener("mouseover", event =>{
+                box.classList.add('red');  
+            })
+            clearBtn.addEventListener("click", event =>{
+                if(document.querySelector('span')){
+                   box.classList.remove('red')
+                } 
+             })
         })
-        clearBtn.addEventListener("click", event =>{
-            if(document.querySelector('span')){
-          
-               let remover = document.querySelectorAll('span.new.red');
-               box.classList.remove('red')
-            }
-         
-         })
- 
-    })
-
+    }
 }
+let userInput = () =>{
+    const aNumber = Number(window.prompt("Type a number", ""));
+    alert (aNumber);
+}
+document.onload = etchBoxes(16);
+
+
+// for (let i = 1; i < gridLength; i++) {
+//     let span = document.createElement("span");
+//     span.setAttribute("class", "new");
+//     div.appendChild(span);
+//     const boxArray = [];
+//     boxArray.push(span)
+//     boxArray.forEach(box =>{
+//         console.log("this is a box")
+//         box.addEventListener("mouseover", event =>{
+//             box.classList.add('red');  
+//         })
+//         clearBtn.addEventListener("click", event =>{
+//             if(document.querySelector('span')){
+//                box.classList.remove('red')
+//             }
+//          })
+//     })
+// }
 
