@@ -6,10 +6,12 @@ clearBtn.classList.add('clear-btn');
 topSectionContainer.append(clearBtn);
 
 let div = document.getElementById("grid-container");
-let gridLength = 257
 
+
+const userInput = document.createElement('input');
+topSectionContainer.append(userInput);
 let etchBoxes = (number) =>{
-    for (let i = 0; i < number*number; i++) {
+    for (let i = 0; i < number * number; i++) {
         let span = document.createElement("span");
         span.setAttribute("class", "new");
         div.appendChild(span);
@@ -23,15 +25,14 @@ let etchBoxes = (number) =>{
             clearBtn.addEventListener("click", event =>{
                 if(document.querySelector('span')){
                    box.classList.remove('red')
+                   
                 } 
              })
         })
     }
 }
-let userInput = () =>{
-    const aNumber = Number(window.prompt("Type a number", ""));
-    alert (aNumber);
-}
+
+
 document.onload = etchBoxes(16);
 
 

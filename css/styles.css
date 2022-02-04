@@ -45,6 +45,7 @@ h1 {
   grid-template-rows: repeat(16, minmax(10px, 40px));
   grid-template-columns: repeat(16, minmax(10px, 40px));
   justify-content: center;
+  min-width: 960px;
 }
 .new {
   border: 2px solid black;
