@@ -42,13 +42,17 @@ h1 {
 
 #grid-container {
   display: grid;
-  grid-template-rows: repeat(16, minmax(10px, 40px));
-  grid-template-columns: repeat(16, minmax(10px, 40px));
+  /* grid-template-rows: repeat(16, minmax(auto, 1fr));
+  grid-template-columns: repeat(16, minmax(10px, 40px)); */
   justify-content: center;
   min-width: 960px;
+  outline: solid;
+  overflow: hidden;
+  /* height: 600px; */
 }
 .new {
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  outline: 1px solid;
   cursor: pointer;
 }
 .red {

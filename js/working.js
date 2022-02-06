@@ -1,3 +1,4 @@
+// Add a button to the top of the screen which will clear the current grid and send the user a popup asking for the number of squares per side for the new grid. Once entered, the new grid should be generated in the same total space as before (e.g. 960px wide) so that you’ve got a new sketch pad. Tip: Set the limit for the user input to a maximum of 100. A larger number of squares results in more computer resources being used, potentially causing delays, freezing, or crashing that we want to prevent.
 const topSectionContainer = document.querySelector('.top-section');
 const clearBtn = document.createElement('a');
 clearBtn.textContent = "Clear Grid";
@@ -9,11 +10,8 @@ let div = document.getElementById("grid-container");
 
 const userInput = document.createElement('input');
 topSectionContainer.append(userInput);
-
 let etchBoxes = (number) =>{
     for (let i = 0; i < number * number; i++) {
-        document.getElementById("grid-container").style.gridTemplateColumns = `repeat(${number}, minmax(auto, 1fr))`
-        document.getElementById("grid-container").style.gridTemplateRows = `repeat(${number}, minmax(5px, 40px))`
         let span = document.createElement("span");
         span.setAttribute("class", "new");
         div.appendChild(span);
@@ -27,29 +25,15 @@ let etchBoxes = (number) =>{
             clearBtn.addEventListener("click", event =>{
                 if(document.querySelector('span')){
                    box.classList.remove('red')
-       
                    
                 } 
              })
         })
-
- 
     }
-
 }
 
 
-userInput.addEventListener('keyup', event =>{
-    if(event.currentTarget.value === 1 || event.currentTarget.value === 2){
-           document.getElementById("grid-container").style.gridTemplateColumns = `repeat(${number}, minmax(auto, 1fr))`
-        document.getElementById("grid-container").style.gridTemplateRows = `repeat(${number}, minmax(5px, 960px))`
-    }
-etchBoxes(event.currentTarget.value);
-    //looks like a 40 X 4 grid is created when the new grid is created
-});
-
-document.onload = etchBoxes(15);
-
+document.onload = etchBoxes(16);
 
 
 // for (let i = 1; i < gridLength; i++) {
@@ -71,3 +55,5 @@ document.onload = etchBoxes(15);
 //     })
 // }
 
+        // document.getElementById("grid-container").style.gridTemplateColumns = `repeat(${number}, minmax(10px, 40px))`
+        // document.getElementById("grid-container").style.gridTemplateRows = `repeat(${number}, minmax(10px, 40px))`
