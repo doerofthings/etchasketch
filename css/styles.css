@@ -48,7 +48,7 @@ h1 {
   min-width: 960px;
   outline: solid;
   overflow: hidden;
-  /* height: 600px; */
+  height: 600px;
 }
 .new {
   /* border: 2px solid black; */

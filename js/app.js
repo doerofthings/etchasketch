@@ -13,7 +13,7 @@ topSectionContainer.append(userInput);
 let etchBoxes = (number) =>{
     for (let i = 0; i < number * number; i++) {
         document.getElementById("grid-container").style.gridTemplateColumns = `repeat(${number}, minmax(auto, 1fr))`
-        document.getElementById("grid-container").style.gridTemplateRows = `repeat(${number}, minmax(5px, 40px))`
+        document.getElementById("grid-container").style.gridTemplateRows = `repeat(${number}, minmax(5px, 600px))`
         let span = document.createElement("span");
         span.setAttribute("class", "new");
         div.appendChild(span);
