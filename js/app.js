@@ -27,10 +27,12 @@ let etchBoxes = (number) =>{
             clearBtn.addEventListener("click", event =>{
                 if(document.querySelector('span')){
                    box.classList.remove('red')
-       
+                   
                    
                 } 
              })
+         
+
         })
 
  
@@ -38,36 +40,31 @@ let etchBoxes = (number) =>{
 
 }
 
+    userInput.addEventListener('keyup', event =>{
+        if(event.currentTarget.value < 0 || event.currentTarget.value === 0){
+            return
+        } else if(event.currentTarget.value > 100){
+            return
+        } 
+        // etchBoxes(event.currentTarget.value)
 
-userInput.addEventListener('keyup', event =>{
-    if(event.currentTarget.value === 1 || event.currentTarget.value === 2){
-           document.getElementById("grid-container").style.gridTemplateColumns = `repeat(${number}, minmax(auto, 1fr))`
-        document.getElementById("grid-container").style.gridTemplateRows = `repeat(${number}, minmax(5px, 960px))`
-    }
-etchBoxes(event.currentTarget.value);
-    //looks like a 40 X 4 grid is created when the new grid is created
-});
+   
+        console.log(document.querySelectorAll('span.new.red'))
+        let checkers = document.querySelectorAll('span.new.red');
+        checkers.forEach(checker => {
+        checker.classList.remove('red')
+     
+        })
+        etchBoxes(event.currentTarget.value)
+    });
+
+
+
+
+
 
 document.onload = etchBoxes(15);
 
 
 
-// for (let i = 1; i < gridLength; i++) {
-//     let span = document.createElement("span");
-//     span.setAttribute("class", "new");
-//     div.appendChild(span);
-//     const boxArray = [];
-//     boxArray.push(span)
-//     boxArray.forEach(box =>{
-//         console.log("this is a box")
-//         box.addEventListener("mouseover", event =>{
-//             box.classList.add('red');  
-//         })
-//         clearBtn.addEventListener("click", event =>{
-//             if(document.querySelector('span')){
-//                box.classList.remove('red')
-//             }
-//          })
-//     })
-// }
 
