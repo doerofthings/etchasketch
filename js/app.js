@@ -1,14 +1,15 @@
 const topSectionContainer = document.querySelector('.top-section');
+const btnAndInputContainer = document.querySelector('.btn-and-input')
 const clearBtn = document.createElement('a');
 clearBtn.textContent = "Clear Grid";
 clearBtn.classList.add('clear-btn');
-topSectionContainer.append(clearBtn);
+btnAndInputContainer.append(clearBtn);
 
 let div = document.getElementById("grid-container");
 
 
 const userInput = document.createElement('input');
-topSectionContainer.append(userInput);
+btnAndInputContainer.append(userInput);
 
 let etchBoxes = (number) =>{
     for (let i = 0; i < number * number; i++) {

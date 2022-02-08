@@ -10,6 +10,8 @@ html {
 body {
   line-height: 1.5;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: #1b3637;
 }
 .top-section {
   display: flex;
@@ -18,10 +20,14 @@ body {
   gap: 20px;
   flex-direction: column;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 h1 {
   margin: 0;
+  padding: 20px;
+  color: white;
+  font-size: 36px;
+  letter-spacing: 3px;
 }
 .clear-btn {
   padding: 10px 20px;
@@ -60,4 +66,13 @@ h1 {
 }
 .black {
   background-color: black;
+}
+.btn-and-input {
+  display: flex;
+  gap: 20px;
+}
+input {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
