@@ -47,7 +47,7 @@ let etchBoxes = (number) =>{
         } else if(event.currentTarget.value > 100){
             return
         } 
-        // etchBoxes(event.currentTarget.value)
+
 
    
         console.log(document.querySelectorAll('span.new.red'))
@@ -59,12 +59,7 @@ let etchBoxes = (number) =>{
         etchBoxes(event.currentTarget.value)
     });
 
-
-
-
-
-
-document.onload = etchBoxes(15);
+document.onload = etchBoxes(16);
 
 
 
